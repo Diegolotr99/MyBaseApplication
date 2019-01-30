@@ -3,4 +3,26 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="bgNavigation">#e6e4e4</color>
+    <color name="bgCircularHorl">#f2f2f2</color>
+    <color name="shadowColor">#CABBBBBB</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="gray">#d4d4d4</color>
+    <color name="grayDark">#454b51</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#16a5dc</color>
+    <color name="light_blue">#EBF5FB</color>
+    <color name="title_blue">#4c7fab</color>
+
+    <color name="red">#cb2a18</color>
+    <color name="light_red">#EC7063</color>
+    <color name="yellow">#f1c235</color>
+    <color name="green">#73b445</color>
+    <color name="forestGreen">#117e3d</color>
+    <color name="darkBlue">#0b4f93</color>
+    <color name="gold">#FFD700</color>
+    <color name="golden_rod">#DAA520</color>
+    <color name="orange">#ffa500</color>
 </resources>
