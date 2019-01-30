@@ -8,7 +8,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.diegogutierrez.mybaseapplication"
-        minSdkVersion 24
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -17,18 +17,40 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-common.pro', 'proguard-debug.pro'
+        }
     }
-    dataBinding{
+    dataBinding {
         enabled = true
+    }
+    flavorDimensions "version 1.0"
+    productFlavors {
+        dev {
+            buildConfigField "String", "APP_API_URL", "\"https://api-dev.app.com\""
+        }
+
+        staging {
+            buildConfigField "String", "APP_API_URL", "\"https://api-staging.app.com\""
+        }
+
+        prod {
+            buildConfigField "String", "APP_API_URL", "\"https://api-production.app.com\""
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
     }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
     implementation 'androidx.core:core-ktx:1.1.0-alpha03'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'

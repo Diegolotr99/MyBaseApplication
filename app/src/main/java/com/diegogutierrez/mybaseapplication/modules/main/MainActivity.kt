@@ -1,9 +1,7 @@
 package com.diegogutierrez.mybaseapplication.modules.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.DataBindingUtil.setContentView
 import androidx.lifecycle.ViewModelProviders
 import com.diegogutierrez.mybaseapplication.R
 import com.diegogutierrez.mybaseapplication.modules.baseComponents.BaseActivity

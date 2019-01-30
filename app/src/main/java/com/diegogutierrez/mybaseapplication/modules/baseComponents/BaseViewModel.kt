@@ -4,14 +4,15 @@ import androidx.lifecycle.ViewModel
 
 
 abstract class BaseViewModel<BView : BaseView> : ViewModel() {
-    private var view: BView? = null
+        private lateinit var view: BaseView
 
-    fun setView(view:BaseView){
-        this.view=view as BView
-    }
-    fun getView(): BView? {
-        return this.view
-    }
+        fun setView(view:BaseView){
+            this.view=view
+        }
+        fun getView():BaseView?{
+            return this.view
+        }
+
     abstract fun onStart()
     abstract fun onStop()
 }

@@ -16,8 +16,7 @@ abstract class BaseFragment<BViewModel : BaseViewModel<*>, BBinding : ViewDataBi
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        val baseView:BaseView=this
-        viewModel.setView(baseView)
+        viewModel.setView(this)
     }
 
     override fun onStart() {
